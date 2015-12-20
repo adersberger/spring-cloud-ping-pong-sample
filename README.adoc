@@ -38,7 +38,10 @@ cd sample-ping
 ./mvnw spring-boot:run
 ----
 
-If all the applications have come up cleanly, the endpoint should be available at http://localhost:8080
+If all the applications have come up cleanly, the following endpoints should be available:
+
+* Ping application web UI: http://localhost:8080
+* Eureka service discovery: http://localhost:8761/eureka
 
 On Docker
 ~~~~~~~~~
@@ -58,5 +61,6 @@ docker-compose up
 ----
 
 That is it, the following endpoints should be available:
+
 * Ping application web UI: http://dockerhost:8080
 * Eureka service discovery: http://dockerhost:8761/eureka
