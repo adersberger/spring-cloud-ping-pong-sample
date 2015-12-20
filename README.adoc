@@ -14,29 +14,28 @@ Running it all local is simple, do the following in sequence, in four different 
 [source,java]
 ----
 cd sample-eureka
-mvn spring-boot:run
+./mvnw spring-boot:run
 ----
-
 
 .Start up Config server
 [source,java]
 ----
 cd sample-config
-mvn spring-boot:run
+./mvnw spring-boot:run
 ----
 
 .Start up Pong Service
 [source,java]
 ----
 cd sample-pong
-mvn spring-boot:run
+./mvnw spring-boot:run
 ----
 
 .Start up Ping Service
 [source,java]
 ----
 cd sample-ping
-mvn spring-boot:run
+./mvnw spring-boot:run
 ----
 
 If all the applications have come up cleanly, the endpoint should be available at http://localhost:8080
@@ -58,8 +57,6 @@ mvn clean package docker:build
 docker-compose up
 ----
 
-That is it, the endpoint should be available at http://dockerhost:8080
-
-
-
-
+That is it, the following endpoints should be available:
+* Ping application web UI: http://dockerhost:8080
+* Eureka service discovery: http://dockerhost:8761/eureka
